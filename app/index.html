@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Field Guide — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; An unofficial fan guide</p>
+  <h1>Leonida Field Guide</h1>
+  <p class="subtitle">Every one of the 55 trophies, in the order to earn them &mdash; with a tracker that remembers your progress.</p>
+  <p class="counts">55 trophies &middot; 1 Platinum &middot; 2 Gold &middot; 6 Silver &middot; 46 Bronze &middot; 27 hidden on PlayStation &middot; 1 missable &middot; about 200 hours to the platinum</p>
+  <div class="progress" id="progressBox" aria-label="Platinum progress">
+    <div class="progress-line"><strong id="progressText">0 of 55 earned</strong><span id="progressPct">0%</span></div>
+    <div class="bar"><div class="bar-fill" id="progressFill"></div></div>
+    <p class="grade-counts" id="gradeCounts">Platinum 0/1 &middot; Gold 0/2 &middot; Silver 0/6 &middot; Bronze 0/46</p>
+  </div>
+</header>
+
+<nav class="controls" aria-label="Tracker controls">
+  <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission, place&hellip;"></label>
+  <label class="select">Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="check"><input id="spoiler" type="checkbox" checked> Spoiler mode: hide story trophies until earned</label>
+  <label class="check"><input id="hideEarned" type="checkbox"> Hide earned</label>
+  <button id="exportBtn" type="button">Export progress</button>
+  <label class="importBtn">Import progress <input id="importFile" type="file" accept="application/json"></label>
+  <button id="resetBtn" type="button">Reset</button>
+</nav>
+
+<div class="chips" id="kindChips" aria-label="Filter by kind">
+  <button type="button" data-kind="all" class="chip active">All 55</button>
+  <button type="button" data-kind="story" class="chip">Story</button>
+  <button type="button" data-kind="missable" class="chip">Missable</button>
+  <button type="button" data-kind="collectibles" class="chip">Collectibles</button>
+  <button type="button" data-kind="activities" class="chip">Activities</button>
+  <button type="button" data-kind="heists" class="chip">Heists</button>
+  <button type="button" data-kind="cars" class="chip">Cars</button>
+  <button type="button" data-kind="hidden" class="chip">Hidden</button>
+</div>
+
+<section class="missable" id="missableBanner" aria-label="The one missable trophy">
+  <p class="missable-flag">&#9888; THE ONLY MISSABLE TROPHY &mdash; DO THIS FIRST</p>
+  <h2>Positive Mental Attitude</h2>
+  <p>Meditate at 18 spots in 10 locations, as Jason and Lucia. Lucia&rsquo;s balcony meditation is only open in <strong>Chapter 1</strong> and vanishes when the chapter ends. There is no mission replay, so if you miss it, the platinum needs a fresh playthrough.</p>
+  <p><strong>Save discipline:</strong> keep a manual save at the start of every chapter, plus one before the final mission. Sources: GTABase; PowerPyx; outputlag.</p>
+  <button type="button" id="jumpMissable">Open its guide</button>
+</section>
+
+<section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+  <h2>Start here: the road to the platinum</h2>
+  <p class="roadmap-intro">Do the stages in order. The roadmap is built from the official trophy descriptions: chapters, missions, collectibles and counts, in the order they open.</p>
+  <ol class="stages">
+    <li class="stage"><span class="stage-no">1</span><h3>Before you start: save discipline</h3><p>Manual save at the start of every chapter, plus one before the final mission. No mission replay, no New Game+.</p><p class="stage-sources">Sources: outputlag; GTABase.</p></li>
+    <li class="stage"><span class="stage-no">2</span><h3>Chapter 1 first</h3><p>Positive Mental Attitude: every meditation spot open in Chapter 1, above all Lucia&rsquo;s balcony. Also start The Goodtime State &mdash; a plane clears the map fog fastest.</p><p class="stage-sources">Sources: GTABase; PowerPyx.</p></li>
+    <li class="stage"><span class="stage-no">3</span><h3>Chapters 1&ndash;4 + Finale: the story</h3><p>The 12 story trophies unlock by finishing chapters and missions: Gone Fishing, Breakfast Run, The Cartel Heist, Child&rsquo;s Play, Headliners, VCIA Takedown, Operation Savage Glory, and the final mission&rsquo;s gold. Spoiler mode hides their names until you earn them.</p><p class="stage-sources">Sources: GamesRadar+; PC Gamer.</p></li>
+    <li class="stage"><span class="stage-no">4</span><h3>Chapter 2+: partners &amp; strangers</h3><p>Once you can switch characters: Hot Together and Retail Therapy with your partner, plus the stranger strands (Andy, Kenton, Billy, Randy, Tyrone, Bret), activities, robberies and collectibles.</p><p class="stage-sources">Sources: GamesRadar+; PowerPyx.</p></li>
+    <li class="stage"><span class="stage-no">5</span><h3>Free-roam clean-up</h3><p>250 stunts, 20 races, 42 shooting-range golds, 14 Top Fun wins, WAiNK at 100 spots, 3 card sets, 50 challenges, 100 vehicles, money and property.</p><p class="stage-sources">Sources: GamesRadar+; PowerPyx.</p></li>
+    <li class="stage"><span class="stage-no">6</span><h3>Post-story: the platinum</h3><p>A Long Road: the 100% checklist at Progress &gt; Stats &gt; 100% Completion (appears after the story; earlier progress counts; nothing on it is missable). Then Vice Got a Price! pops with the 54th trophy.</p><p class="stage-sources">Sources: PowerPyx; GamesRadar+; GTABase.</p></li>
+  </ol>
+</section>
+
+<main class="layout">
+  <section class="checklist" aria-label="Trophy checklist">
+    <h2 id="listHeading">Checklist &mdash; all 55 trophies</h2>
+    <p class="list-note">Tick a trophy when you earn it. Progress is saved in this browser and can be exported to a file. Click any trophy to open its full guide with sources.</p>
+    <p class="showing" id="showingLine"></p>
+    <ul class="cards" id="cards"></ul>
+  </section>
+  <aside class="detail" id="detailPanel" aria-label="Trophy detail">
+    <h2>Trophy guide</h2>
+    <div id="detailBody"><p class="detail-empty">Click a trophy in the checklist to read its guide, where and how, when it can be missed, and its sources.</p></div>
+  </aside>
+</main>
+
+<footer>
+  <p>Leonida Field Guide is an unofficial fan guide. Grand Theft Auto and GTA are trademarks of their owners; this guide uses no Rockstar logo, artwork or game screenshots. Trophy names and descriptions are shown as PlayStation publishes them; every guide is written in our own words and cites its sources beside it. Works fully offline &mdash; it loads no file from the network.</p>
+  <p>Sources used across this guide: GamesRadar+ (via gtasix.how), PC Gamer, PowerPyx, GTABase, PlayStation / Exophase via Push Square, Press Start, outputlag, HarryNinetyFour.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
